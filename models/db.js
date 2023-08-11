@@ -7,9 +7,8 @@ const pool = mysql.createPool({
 });
 
 pool.getConnection()
-    .then(connection => {
+    .then(()=> {
         console.log('Connected to MySQL database!');
-        connection.release();
     })
     .catch(error => {
         console.error('Error connecting to MySQL database:', error);
